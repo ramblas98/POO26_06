@@ -1,4 +1,4 @@
-package ejercicio5_interface;
+package ejercicio_ferro;
 
 import java.lang.Comparable;
 import java.util.Collections;

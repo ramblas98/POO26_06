@@ -1,10 +1,22 @@
-package ejercicio5_interface;
+package ejercicio_ferro;
 
 import java.lang.Comparable;
 
-public abstract class  Vagon {
+public abstract class Vagon{
     private final double largo;
     private final double ancho;
+    private String marca;
+    private int anio;
+    /*
+    @Override
+    public boolean equals(Object obj) {
+        return super.equals(obj);
+    }
+
+    @Override
+    public int compareTo(Vagon v){
+        return Integer.compare(this.anio,v.anio);
+    }*/
 
     public Vagon() {
         this.largo = 2.5;

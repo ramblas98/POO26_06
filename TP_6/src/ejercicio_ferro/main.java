@@ -1,4 +1,4 @@
-package ejercicio5_interface;
+package ejercicio_ferro;
 
 public class main {
     public static void main(String[] args){

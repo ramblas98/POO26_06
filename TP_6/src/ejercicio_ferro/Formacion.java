@@ -1,28 +1,48 @@
-package ejercicio5_interface;
+package ejercicio_ferro;
 
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Comparator;
+import java.util.Objects;
 
 public class Formacion implements Comparable<Formacion>{
     private ArrayList<Locomotora> locomotoras;
     private ArrayList<Vagon> vagones;
+    private String codigo;
+
+    @Override
+    public boolean equals(Object obj) {
+        if(this == obj){
+            return true;
+        }
+
+        if(obj == null || getClass() != obj.getClass()){
+            return false;
+        }
+
+        Formacion otro = (Formacion) obj;
+        return this.codigo.equals(otro.codigo);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(codigo);
+    }
+
 
     @Override
     public int compareTo(Formacion o){
-        /*
-        double um1 = this.velocidadMaxima();
-        double um2 = o.velocidadMaxima();
-        if(um1 == um2){
-            return 0;
-        } else if (um1 < um2) {
-            return -1;
-        }else{
-            return 1;
-        }
-        */
-        return Double.compare(this.velocidadMaxima(),o.velocidadMaxima());
+        int velocidad = Double.compare(this.velocidadMaxima(),o.velocidadMaxima());
+        int codigos = this.codigo.compareTo(o.codigo);
+        return Integer.compare(velocidad,codigos);
     }
+
+    /*
+    @Override
+    public int compareTo(Formacion o){
+        return ;
+    }
+     */
 
     // Ordenar los vagones de esta formación por peso máximo (ascendente)
     public void ordenarVagonesPorPeso() {
