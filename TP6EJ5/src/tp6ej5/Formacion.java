@@ -11,6 +11,12 @@ public class Formacion implements Comparable<Formacion>{
     private static int contadorFormaciones = 0;
     private final int numeroFormacion;
 
+    public Formacion(){
+        this.locomotoras= new ArrayList<>();
+        this.vagones= new ArrayList<>();
+        contadorFormaciones++; // El contador global aumenta
+        this.numeroFormacion = contadorFormaciones;
+    }
     public Formacion(String codigo) {
         this.locomotoras= new ArrayList<>();
         this.vagones= new ArrayList<>();
@@ -35,6 +41,7 @@ public class Formacion implements Comparable<Formacion>{
     }
     public void agregarVagon(Vagon v) {
         this.vagones.add(v);
+        v.setNumeroVagon(this.vagones.size()); 
     }
     public void setCodigo(String codigo) {
         this.codigo=codigo;

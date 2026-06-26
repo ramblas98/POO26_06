@@ -6,21 +6,6 @@ public class VagonPasajero extends Vagon implements Comparable<Vagon>{
     public VagonPasajero(double largo, double ancho, String marca, int anioFabricacion) {
         super(largo, ancho, marca, anioFabricacion);
     }
-    /*public VagonPasajero(int cantP) {
-        this.cantP = cantP;
-    }
-
-    public VagonPasajero(double largo, double ancho, int cantP) {
-        super(largo, ancho);
-        this.cantP = cantP;
-    }
-
-    public int getCantP(){
-        return this.cantP;
-    }
-    public void setCantP(int cantP) {
-        this.cantP = cantP;
-    }*/
 
     @Override
     public double pesoMaximo() {

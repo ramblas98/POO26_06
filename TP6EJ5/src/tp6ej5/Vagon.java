@@ -8,6 +8,8 @@ public abstract class  Vagon implements Comparable<Vagon>{
     private double ancho;
     private String marca;
     private int anioFabricacion;
+    
+    private int numeroVagon=0;
 
     public Vagon() {
     }
@@ -29,6 +31,13 @@ public abstract class  Vagon implements Comparable<Vagon>{
     public int getAnioFabricacion(){ 
         return anioFabricacion;
     }
+    public int getNumeroVagon(){
+        return this.numeroVagon;
+    }
+    public void setNumeroVagon(int numeroVagon){
+        this.numeroVagon=numeroVagon;
+    }
+    
     public void setLargo(double largo) {
         this.largo = largo;
     }
@@ -36,6 +45,11 @@ public abstract class  Vagon implements Comparable<Vagon>{
         this.ancho = ancho;
     }
 
+     public int obtenerNumeroVagon(int numeroVagon) {
+        this.numeroVagon = numeroVagon;
+        return numeroVagon;
+    }
+    
     public int cantidadPasajeros() {
         return 0;
     }
@@ -72,6 +86,6 @@ public abstract class  Vagon implements Comparable<Vagon>{
     }
     @Override
     public String toString(){
-        return "Vagon peso maximo: " + this.pesoMaximo();
+        return "\nVAGON N" + this.getNumeroVagon() + ": \npeso maximo: " + this.pesoMaximo()+"\n";
     }
 }

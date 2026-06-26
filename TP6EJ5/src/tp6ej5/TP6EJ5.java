@@ -22,18 +22,18 @@ public class TP6EJ5 {
         Locomotora l2= new Locomotora(1000.0, 40000.0, 70000.0);
         f1.agregarLocomotora(l1);
         f1.agregarLocomotora(l2);
-        System.out.println("Puede moverse f1?"+f1.puedeMoverse());//---
+        //System.out.println("Puede moverse f1?"+f1.puedeMoverse());//---
         
         //Formacion 2
         Formacion f2=new Formacion("L-456");
         f2.agregarVagon(new VagonCarga(102, 3.5, "Alstom", 2020, 3000.0));
-        System.out.println("Puede moverse f2?"+f2.puedeMoverse());
+        //System.out.println("Puede moverse f2?"+f2.puedeMoverse());
         //F1 y F2 al deposito
         d.agregarFormacion(f1);
         d.agregarFormacion(f2);
         
         //Locomotoras sueltas
-        System.out.println("Locomotoras sueltas");
+        //System.out.println("Locomotoras sueltas");
         Locomotora lSuelta1= new Locomotora(11.0, 22.0, 33.0);
         d.agregarLocomotoraSuelta(lSuelta1);
         Locomotora lSuelta2= new Locomotora(44.0, 55.0, 66.0);
@@ -53,7 +53,7 @@ public class TP6EJ5 {
         //System.out.println("\n---ESTADO FORMACIONES INICIAL---");
         //d.mostrarDetallesFormaciones();
         
-        System.out.println("Locomotoras sueltas disponibles: " + d.getListaLocomotorasSueltas().size());
+        //System.out.println("Locomotoras sueltas disponibles: " + d.getListaLocomotorasSueltas().size());
         // completa las formaciones que no pueden moverse 
         
         //Formacion 3
@@ -62,7 +62,7 @@ public class TP6EJ5 {
         f3.agregarVagon(new VagonCarga(1, 1, "Siemens",2012, 30.0));
         Locomotora la= new Locomotora(12.0, 45.0, 78.0);
         f3.agregarLocomotora(la);
-        System.out.println("Verificacion f3: " + f3.puedeMoverse());
+        //System.out.println("Verificacion f3: " + f3.puedeMoverse());
         d.agregarFormacion(f3);
         //Formacion 4
         Formacion f4=new Formacion("V-000");
@@ -70,7 +70,7 @@ public class TP6EJ5 {
         f4.agregarVagon(new VagonCarga(3, 1,  "Alstom", 2025, 20.0));
         Locomotora lb= new Locomotora(11.0, 35.0, 48.0);
         f4.agregarLocomotora(lb);
-        System.out.println("Verificacion f4: " + f4.puedeMoverse());
+        //System.out.println("Verificacion f4: " + f4.puedeMoverse());
         d.agregarFormacion(f4);
         
         
@@ -92,6 +92,10 @@ public class TP6EJ5 {
         //d.ordenarPorPasajeros();
         //d.ordenarPorPesoVagon();
         d.ordenarPorCantidadLocomotorasEnFormacion();*/
+        
+        d.mostrarDetallesFormaciones();
+        //(System.out.println("\nVAGONES---");
+        //System.out.println(d.getListaFormaciones().get(1).getVagones().toString());
         
         //HashSet
         System.out.println("\n---Marcas Unicas (HashSet)---");
