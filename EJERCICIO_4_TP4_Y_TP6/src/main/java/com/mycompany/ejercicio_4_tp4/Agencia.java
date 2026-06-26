@@ -17,6 +17,14 @@ import java.util.TreeSet;
 public class Agencia {
     private ArrayList<Auto> flota ;
     
+    public Agencia() {
+    this.flota = new ArrayList<Auto>();
+    }
+    
+    public Agencia(ArrayList<Auto> flota) {
+        this.flota = flota;
+    }
+    
     public void agregarAuto(Auto a){
         flota.add(a);
     }
@@ -58,7 +66,7 @@ public class Agencia {
     }
     
     public TreeSet<Auto> obtenerVehiculosPorCostoDiario(){
-        TreeSet<Auto> c = new TreeSet<Auto>();
+        TreeSet<Auto> c = new TreeSet<Auto>(new ComparaAutoConsumo());
     
         if(flota.isEmpty()){
             System.out.println("Inventario vacio, no hay vehiculos disponibles");

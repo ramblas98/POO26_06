@@ -9,5 +9,7 @@
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <maven.compiler.release>24</maven.compiler.release>
         <exec.mainClass>com.mycompany.ejercicio_4_tp4.EJERCICIO_4_TP4</exec.mainClass>
+        <maven.compiler.source>1.5</maven.compiler.source>
+        <maven.compiler.target>1.5</maven.compiler.target>
     </properties>
 </project>
