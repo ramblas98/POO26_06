@@ -10,6 +10,10 @@ public class Formacion implements Comparable<Formacion>{
     private ArrayList<Vagon> vagones;
     private String codigo;
 
+    public String getCodigo() {
+        return codigo;
+    }
+
     @Override
     public boolean equals(Object obj) {
         if(this == obj){
@@ -49,7 +53,9 @@ public class Formacion implements Comparable<Formacion>{
         Collections.sort(this.vagones, new CompararPesoVagon());
     }
 
-
+    public void ordenarPorPesoMaximo(){
+        Collections.sort(vagones, new CompararPorPesoMaximo());
+    }
     public void ordenarLocomotorasPorPesoDeArrastre(){
         Collections.sort(this.locomotoras);
     }

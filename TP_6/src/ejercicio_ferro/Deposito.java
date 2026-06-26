@@ -1,9 +1,6 @@
 package ejercicio_ferro;
 
-import java.util.ArrayList;
-import java.util.Collections;
-import java.util.Comparator;
-import java.util.Iterator;
+import java.util.*;
 
 public class Deposito {
     private ArrayList<Formacion> listaFormaciones;
@@ -161,5 +158,31 @@ public class Deposito {
             }
             */
 
+    }
+
+    public Set<String> obtenerMarcasDeVagones(){
+        Set<String> lista = new HashSet<String>();
+        for(Formacion i : listaFormaciones){
+            for(Vagon j : i.getVagones()){
+                lista.add(j.getMarca());
+            }
+        }
+        return lista;
+    }
+
+    public Set<Formacion> obtenerHistorialDeFormacion(){
+        Set<Formacion> lista = new LinkedHashSet<Formacion>(listaFormaciones);
+        return lista;
+    }
+
+    public Set<Formacion> listaFormacionPorCodigo(){
+        Set<Formacion> lista = new TreeSet<Formacion>(listaFormaciones);
+        return lista;
+    }
+
+    public Set<Vagon> listarVagonesPorPesoMaximo(Formacion f){
+        f.ordenarPorPesoMaximo();
+        Set<Vagon> lista = new TreeSet<Vagon>(f.getVagones());
+        return lista;
     }
 }

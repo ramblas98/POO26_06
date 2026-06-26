@@ -1,27 +1,7 @@
 package ejercicio_ferro;
 
-import java.lang.Comparable;
-
-public class VagonCarga extends Vagon implements Comparable<VagonCarga> {
+public class VagonCarga extends Vagon{
     private double cargaMaxima;
-
-    @Override
-    public int compareTo(VagonCarga o){
-        /*
-        double ps1 = this.cargaMaxima;
-        double ps2 = o.cargaMaxima;
-        if(ps1 == ps2){
-            return 0;
-        } else if (ps1 < ps2) {
-            return -1;
-        }else{
-            return 1;
-        }
-        */
-        return Double.compare(this.cargaMaxima,o.cargaMaxima);
-    }
-    public VagonCarga() {
-    }
 
     public VagonCarga(double cargaMaxima) {
         this.cargaMaxima = cargaMaxima;
@@ -47,4 +27,5 @@ public class VagonCarga extends Vagon implements Comparable<VagonCarga> {
         }
         return false;
     }
+
 }
