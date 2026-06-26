@@ -163,11 +163,11 @@ public class Formacion implements Comparable<Formacion>{
     }
     @Override
     public boolean equals(Object obj){
-        if(this == obj) return true;// 1. Identidad
-        if(obj == null) return false;// 2. Nulidad
-        if (this.getClass() != obj.getClass()) return false;// 3. Compatibilidad
-        Formacion otra = (Formacion) obj; // 4. Casteo
-        return Objects.equals(this.codigo, otra.codigo); // 5. Atributo
+        if(this == obj) return true;
+        if(obj == null) return false;
+        if (this.getClass() != obj.getClass()) return false;
+        Formacion otra = (Formacion) obj; 
+        return Objects.equals(this.codigo, otra.codigo);
     }
     @Override
     public int hashCode() {

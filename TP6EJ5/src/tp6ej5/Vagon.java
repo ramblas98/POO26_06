@@ -64,19 +64,10 @@ public abstract class  Vagon implements Comparable<Vagon>{
 
     @Override
     public boolean equals(Object obj) {
-        // Paso 1: Identidad (¿Es el mismo objeto en memoria?)
         if (this == obj) return true;
-        
-        // Paso 2: Nulidad (¿El objeto que viene es nulo?)
         if (obj == null) return false;
-        
-        // Paso 3: Compatibilidad de Clases (¿Tienen exactamente la misma clase?)
         if (this.getClass() != obj.getClass()) return false;
-        
-        // Paso 4: Casteo (Convertimos el Object genérico al tipo de la clase)
         Vagon otro = (Vagon) obj;
-        
-        // Paso 5: Comparación de atributos de negocio (marca y año)
         return this.anioFabricacion == otro.anioFabricacion && 
                Objects.equals(this.marca, otro.marca);
     }
