@@ -183,6 +183,8 @@ public class Deposito {
     public Set<Vagon> listarVagonesPorPesoMaximo(Formacion f){
         f.ordenarPorPesoMaximo();
         Set<Vagon> lista = new TreeSet<Vagon>(f.getVagones());
+        //Set<Vagon> lista = new TreeSet<Vagon>(new CompararPorPesoMaximo);
+        //lista.addAll(f.getVagones());
         return lista;
     }
 }

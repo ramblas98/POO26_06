@@ -14,6 +14,10 @@ public class Formacion implements Comparable<Formacion>{
         return codigo;
     }
 
+    public void setCodigo(String codigo) {
+        this.codigo = codigo;
+    }
+
     @Override
     public boolean equals(Object obj) {
         if(this == obj){
@@ -36,17 +40,8 @@ public class Formacion implements Comparable<Formacion>{
 
     @Override
     public int compareTo(Formacion o){
-        int velocidad = Double.compare(this.velocidadMaxima(),o.velocidadMaxima());
-        int codigos = this.codigo.compareTo(o.codigo);
-        return Integer.compare(velocidad,codigos);
+        return this.codigo.compareTo(o.codigo);
     }
-
-    /*
-    @Override
-    public int compareTo(Formacion o){
-        return ;
-    }
-     */
 
     // Ordenar los vagones de esta formación por peso máximo (ascendente)
     public void ordenarVagonesPorPeso() {
@@ -63,6 +58,13 @@ public class Formacion implements Comparable<Formacion>{
     public Formacion() {
         this.locomotoras = new ArrayList<>();
         this.vagones = new ArrayList<>();
+        this.codigo = "F-xxx";
+    }
+
+    public Formacion(String codigo){
+        this.locomotoras = new ArrayList<>();
+        this.vagones = new ArrayList<>();
+        this.codigo = codigo;
     }
 
     public ArrayList<Locomotora> getLocomotoras() {
