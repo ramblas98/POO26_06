@@ -63,10 +63,7 @@ public abstract class Lectura implements Comparable<Lectura>{
         return this.titulo.equalsIgnoreCase(otra.titulo);
     }
 
-    @Override
-    public int hashCode() {
-        return titulo.toLowerCase().hashCode();
-    }
+    
 
     // Comparable: orden natural por calificacion de mayor a menor
     @Override

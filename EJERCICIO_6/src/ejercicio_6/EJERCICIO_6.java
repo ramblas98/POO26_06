@@ -3,10 +3,8 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Main.java to edit this template
  */
 
-/**
- *
- * @author Hp
- */
+package ejercicio_6;
+
 public class EJERCICIO_6 {
 
     public static void main(String[] args) {
