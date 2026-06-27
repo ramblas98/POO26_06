@@ -162,5 +162,15 @@ public class BibliotecaPersonal {
     }
     
     //Indicar si todas Las Lecturas Gustaron? 
+    public boolean todasGustaron(){
+        Iterator<Lectura> it= this.coleccion.iterator();
+        boolean b = false;
+        
+        while(it.hasNext() && !b){
+            Lectura l = it.next();
+            if(l.getCalificacion() == 0) b= true;
+        }
+        return (b== false);
+    }
     
 }//Cierre de clase 

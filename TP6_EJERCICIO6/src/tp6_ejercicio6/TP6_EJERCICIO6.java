@@ -20,11 +20,11 @@ public class TP6_EJERCICIO6 {
         
         BibliotecaPersonal b = new BibliotecaPersonal();
         
-        Lectura l1 = new Libro("Libro1", "AutorLibro1", 50,5, Genero.CIENCIA_FICCION, 1990);
-        Lectura l2 = new Libro("Libro1", "AutorLibro2", 110,9, Genero.ENSAYO, 1990);
+        Lectura l1 = new Libro("Libro1", "AutorLibro1", 50,0, Genero.CIENCIA_FICCION, 1990);
+        Lectura l2 = new Libro("Libro2", "AutorLibro2", 110,9, Genero.ENSAYO, 1990);
         Lectura c1 = new Comic("Comic1", "AutorComic1", 25,6, "DibujanteComic1", true);
         Lectura c2 = new Comic("Comic2", "AutorComic2", 15,8, "DibujanteComic2", false);
-        Lectura r1 = new Revista("Revista1","AutorRevista1", 83,2,3, Tematica.ACTUALIDAD);
+        Lectura r1 = new Revista("Revista2","AutorRevista1", 83,2,3, Tematica.ACTUALIDAD);
         Lectura r2 = new Revista("Revista2","AutorRevista2", 211,4,1, Tematica.CIENCIA);
         
         b.agregarLectura(l2);
@@ -53,7 +53,8 @@ public class TP6_EJERCICIO6 {
         System.out.println("\nLECTURAS ORDENADAS POR TIEMPO ESTIMADO DE LECTURA(menor a mayor): ");
         b.listarLecturasPorTiempoEstimado();
         
-        
+        String r = b.todasGustaron()? "TODAS LAS LECTURAS LE GUSTARON" : "NO LE GUSTARON TODAS LAS LECTURAS ";
+        System.out.println(r);
     }
     
 }
